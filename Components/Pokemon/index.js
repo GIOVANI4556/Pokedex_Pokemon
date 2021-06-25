@@ -27,21 +27,21 @@ export const Poke = () => {
     bug: '#729f3f',
     dragon: '#d1786e',
     fairy: '#fdb9e9',
-    fire: '#fd7d24',
+    fire: '#fb6c6c',
     ghost: '#7b62a3',
     ground: '#ccb740',
     normal: '#a4acaf',
     psychic: '#f366b9',
     steel: '#9eb7b8',
     dark: '#707070',
-    electric: '#eed535',
+    electric: '#ffd86f',
     fighting: '#d56723',
     flying: '#7ac0d4',
-    grass: '#9bcc50',
+    grass: '#48d0b0',
     ice: '#51c4e7',
     poison: '#b97fc9',
     rock: '#a38c21',
-    water: '#4592c4',
+    water: '#76bdfe',
   };
 
   const addPokemonTypeToResults = results => {
@@ -74,10 +74,10 @@ export const Poke = () => {
     });
   };
 
-  const filtePokemons = textFilter => {
+  const filterPokemons = textFilter => {
     if (textFilter === '') {
       setResults(pokemons);
-    } else {
+    } else if (textFilter.length >= 3 && results.length) {
       setResults(
         pokemons.filter(item => {
           if (item.name.toLowerCase().indexOf(textFilter.toLowerCase()) > -1) {
@@ -125,7 +125,7 @@ export const Poke = () => {
 
   const handleOnChangeText = name => {
     setSearchfield(name);
-    filtePokemons(name);
+    filterPokemons(name);
   };
 
   const handleOnEndReached = () => {
@@ -175,6 +175,19 @@ export const Poke = () => {
         </View>
       ) : (
         <View style={{flex: 1}}>
+          <View>
+            <Image
+              style={{
+                height: 200,
+                width: 200,
+                position: 'absolute',
+                right: -80,
+                top: -40,
+                tintColor: '#f5f5f6',
+              }}
+              source={require('../../Img/pokeball.png')}
+            />
+          </View>
           <Text
             style={{
               padding: 10,
@@ -186,9 +199,7 @@ export const Poke = () => {
           <View
             style={{
               flexDirection: 'row',
-              justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: '#fff',
             }}>
             <Icon
               style={{padding: 10}}
@@ -198,17 +209,18 @@ export const Poke = () => {
             />
             <TextInput
               style={{
-                flex: 1,
                 paddingTop: 10,
                 paddingRight: 10,
                 paddingBottom: 10,
                 paddingLeft: 0,
                 backgroundColor: '#fff',
                 color: '#424242',
+                maxWidth:150
               }}
               placeholder="Search Pokemons"
               onChangeText={handleOnChangeText}
               value={searchfield}
+              autoCorrect={false}
             />
           </View>
           <FlatList

@@ -76,6 +76,18 @@ export const PokemonShow = item => {
               );
             })}
         </View>
+          <Image
+          style={{
+            zIndex:-1,
+            tintColor:'rgba(255, 255, 255, 0.30)',
+            width: 85,
+            height: 85,
+            position:'absolute', 
+            right:-15, 
+            bottom:-15
+          }}
+          source={require('../../Img/pokeball.png')}
+        />
         <Image
           style={{
             width: 60,
