@@ -8,8 +8,6 @@ export const PokemonShow = item => {
   const pokemonsLength = item.pokemonsLength;
   const navigation = useNavigation();
 
-  console.log('status', status);
-
   const pokemonNumber = url
     .replace('https://pokeapi.co/api/v2/pokemon/', '')
     .replace('/', '');

@@ -175,23 +175,42 @@ export const Poke = () => {
         </View>
       ) : (
         <View style={{flex: 1}}>
-          <Text style={{padding: 10, fontSize: 25, fontWeight: 'bold'}}>
+          <Text
+            style={{
+              padding: 10,
+              fontSize: 25,
+              fontWeight: 'bold',
+            }}>
             Pokedex
           </Text>
-
-          <TextInput
+          <View
             style={{
-              height: 40,
-              borderWidth: 1,
-              borderColor: '#000',
-              textAlign: 'center',
-              borderRadius: 10,
-              margin: 10,
-            }}
-            placeholder="Search Pokemons"
-            onChangeText={handleOnChangeText}
-            value={searchfield}
-          />
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: '#fff',
+            }}>
+            <Icon
+              style={{padding: 10}}
+              name="search"
+              size={20}
+              color={'#424242'}
+            />
+            <TextInput
+              style={{
+                flex: 1,
+                paddingTop: 10,
+                paddingRight: 10,
+                paddingBottom: 10,
+                paddingLeft: 0,
+                backgroundColor: '#fff',
+                color: '#424242',
+              }}
+              placeholder="Search Pokemons"
+              onChangeText={handleOnChangeText}
+              value={searchfield}
+            />
+          </View>
           <FlatList
             numColumns={2}
             data={results}
