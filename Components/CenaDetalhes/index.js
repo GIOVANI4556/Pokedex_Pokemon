@@ -7,8 +7,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 export const PokesDetlhes = ({route}) => {
   const navigation = useNavigation();
-  
-
 
   const {
     name = '',
@@ -19,14 +17,12 @@ export const PokesDetlhes = ({route}) => {
     status = '',
   } = route.params;
 
-  
-
   const statusList = [
     {
       name: 'Experience',
       value: status.base_experience,
     },
-    
+
     {
       name: 'Height',
       value: status.height,
@@ -38,7 +34,6 @@ export const PokesDetlhes = ({route}) => {
   ];
 
   const renderStatusItem = ({item, index}) => {
-    
     const isLastItem = index === statusList.length - 1;
 
     return (

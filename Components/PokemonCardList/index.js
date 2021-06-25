@@ -10,7 +10,6 @@ export const PokemonShow = item => {
 
   console.log('status', status);
 
-
   const pokemonNumber = url
     .replace('https://pokeapi.co/api/v2/pokemon/', '')
     .replace('/', '');
