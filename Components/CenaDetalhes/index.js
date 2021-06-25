@@ -138,6 +138,19 @@ export const PokesDetlhes = ({route}) => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
+               <Image
+              style={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: 200,
+                height: 200,
+                right:-15,
+                position:'absolute',
+                tintColor:'rgba(255, 255, 255, 0.30)' 
+                
+              }}
+              source={require('../../Img/pokeball.png')}
+            />
             <Image
               style={{
                 justifyContent: 'center',
@@ -150,6 +163,7 @@ export const PokesDetlhes = ({route}) => {
           </View>
         </View>
       </View>
+     
       <Image
         style={{alignSelf: 'flex-end', width: '100%', height: '15%'}}
         resizeMode={'stretch'}

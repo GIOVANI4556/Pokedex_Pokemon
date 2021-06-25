@@ -215,7 +215,7 @@ export const Poke = () => {
                 paddingLeft: 0,
                 backgroundColor: '#fff',
                 color: '#424242',
-                maxWidth:150
+                maxWidth: 150,
               }}
               placeholder="Search Pokemons"
               onChangeText={handleOnChangeText}
