@@ -1,15 +1,14 @@
 import axios from 'axios';
-import React, {useEffect, useState, componentDidMount} from 'react';
+import React, {useEffect, useState,} from 'react';
 import {
   View,
   FlatList,
   ActivityIndicator,
   Text,
   TextInput,
-  TouchableOpacity,
+
   Image,
-  TouchableWithoutFeedback,
-  Animated,
+ 
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {PokemonShow} from '../PokemonCardList';
