@@ -53,4 +53,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React Navigation](https://reactnavigation.org/)
 
 ## Inspiração
-Design inspirado pela [Pokedex App design](https://dribbble.com/shots/6563578-Pokedex-App-Animation) feita por [Saepul Nahwan.](https://www.instagram.com/saepulnahwan/)
+Projeto inspirado no design feito por [Saepul Nahwan.](https://www.instagram.com/saepulnahwan/)
